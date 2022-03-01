@@ -14,7 +14,10 @@
 </head>
 <body>
     <div class="container">
+        <a href="index.php"> Cadastrar</a>
+        <a href="listar.php"> Listar</a>
         <h1>Cadastrar Usuário</h1>
+     
         <?php
 
             if(isset($_SESSION['msg'])){

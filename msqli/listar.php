@@ -17,6 +17,8 @@ include_once "conexao.php"
 
 <body>
     <div class="container">
+        <a href="index.php"> Cadastrar</a>
+        <a href="listar.php"> Listar</a>
         <h1>Listar Usuário</h1>
         <?php
 
@@ -64,8 +66,11 @@ include_once "conexao.php"
         }
 
         echo "$pagina";
-        for($pagina_dep = $pagina = 1; $pagina_dep <= $pagina + $max_links; $pagina_dep++){
-            echo "<a href ='listar.php?pagina=$pagina_dep'>$pagina_dep</a>";
+        for($pagina_dep = $pagina + 1; $pagina_dep <= $pagina + $max_links; $pagina_dep++){
+
+            if ($pagina_ant <= $quantidade_pg) {
+                echo "<a href ='listar.php?pagina=$pagina_dep'>$pagina_dep</a>";
+            }
 
         }
 
