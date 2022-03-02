@@ -1,3 +1,10 @@
+<?php
+include "conexao.php";
+$pdo = conectar();
+
+$tabela = "usuarios";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
